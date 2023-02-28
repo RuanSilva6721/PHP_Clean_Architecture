@@ -1,0 +1,15 @@
+{
+    "name": "ruan/arquitetura",
+    "autoload": {
+        "psr-4": {
+            "Ruan\\Arquitetura\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ruan Silva",
+            "email": "ruansilva6721@gmail.com"
+        }
+    ],
+    "require": {}
+}
