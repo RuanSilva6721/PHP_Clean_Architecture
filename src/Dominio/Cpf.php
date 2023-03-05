@@ -1,5 +1,6 @@
-<?php 
-namespace Ruan\Arquitetura;
+<?php
+
+namespace Ruan\Arquitetura\Dominio;
 
 class Cpf
 {
@@ -17,10 +18,15 @@ class Cpf
                 'regexp' => '/\d{3}\.\d{3}\.\d{3}\-\d{2}/'
             ]
         ];
-        if(filter_var($numero,FILTER_VALIDATE_REGEXP, $opcoes) == false) {
-        throw new \InvalidArgumentException('CPF no formato inválido');
+        if (filter_var($numero, FILTER_VALIDATE_REGEXP, $opcoes) === false) {
+            throw new \InvalidArgumentException('CPF no formato inválido');
         }
 
         $this->numero = $numero;
+    }
+
+    public function __toString(): string
+    {
+        return $this->numero;
     }
 }
